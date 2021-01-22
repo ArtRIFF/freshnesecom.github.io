@@ -1,0 +1,16 @@
+//!!!!Normalize.css
+@import url("normalize.min.css");
+
+//!!!Переменные
+@import "parts/vars";
+@import "parts/mixins";
+//!!Основные стили
+@import "parts/basic";
+
+//!!Кнопки
+@import "parts/button";
+
+
+
+//!Стили которые относятся к шапке
+@import "parts/header";

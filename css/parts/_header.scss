@@ -1,0 +1,159 @@
+.header {
+  &__top {
+    display: flex;
+    align-items: center;
+justify-content: space-between;
+padding-top: 12px;
+padding-bottom: 12px;
+
+&-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+&-item {
+  margin-right: 33px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+&-link {
+  font-family:'Open Sans',-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  font-style: 12px;
+  text-decoration: none;
+  color:$accent;
+
+ &:hover {
+   text-decoration: underline;
+ }
+}
+  }
+  // header-top
+  &__mail,
+  &__phone {
+    color:$dark;
+  }
+  //Header middle
+  &__middle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  &__button {
+    background-color: transparent;
+    border: none;
+    position: relative;
+  }
+
+  &__action-source {
+    width: 24px;
+    height: 24px;
+  }
+  // счетчик товаров
+.cart-counter {
+  background-color: $secondary-accent;
+  color: white;
+  font-weight: 600;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 18px;
+  width: 18px;
+  border-radius: 60%;
+  position: absolute;
+  left: 2px;
+  bottom:-2px;
+}
+//Поиск
+&__search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 500px;
+  padding: 5px 15px;
+  border-radius: 12px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: lighten($dark, 75%);
+}
+
+.product {
+&-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  width: 130px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    display: inline-block;
+    background-color: lighten($dark, 75%);
+    right: -15px;
+    top: 0;
+    transform: translateY(1px);
+  }
+}
+&-item {
+  font-size: 15px;
+  font-weight: 700;
+  color:$dark;
+  line-height:23px;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  .list-arrow-down {
+   @include dfcc;
+
+    position: absolute;
+    right: 0;
+    top:50%;
+    transform:translateY(-50%);
+    width: 10px;
+    height: 10px;
+  
+  }
+}
+}
+
+.input__search {
+  height: 30px;
+  width: 100%;
+  padding-right: 30px;
+  border: none;
+
+  &::placeholder {
+    color: lighten($dark, 25%);
+    font-style: 14px;
+  }
+}
+
+.search-wrap {
+  width: 310px;
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  right: 4px;
+  top: 5px;
+
+  &__source{
+    width: 20px;
+    height: 20px; 
+  }
+}
+}
